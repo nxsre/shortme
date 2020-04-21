@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"log"
 
-	"github.com/andyxning/shortme/conf"
-	"github.com/andyxning/shortme/sequence"
+	"github.com/nxsre/shortme/conf"
+	"github.com/nxsre/shortme/sequence"
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -43,7 +43,8 @@ func (dbSeq *SequenceDB) Close() {
 
 func (dbSeq *SequenceDB) NextSequence() (sequence uint64, err error) {
 	var stmt *sql.Stmt
-	stmt, err = dbSeq.db.Prepare(`REPLACE INTO sequence(stub) VALUES ("sequence")`)
+	//stmt, err = dbSeq.db.Prepare(`REPLACE INTO sequence(stub) VALUES ("sequence")`)
+	stmt, err = dbSeq.db.Prepare(`REPLACE INTO sequence set stub='sequence'`)
 	if err != nil {
 		log.Printf("sequence db prepare error. %v", err)
 		return 0, err

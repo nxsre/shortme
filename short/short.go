@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/andyxning/shortme/base"
-	"github.com/andyxning/shortme/conf"
-	"github.com/andyxning/shortme/sequence"
-	_ "github.com/andyxning/shortme/sequence/db"
+	"github.com/nxsre/shortme/base"
+	"github.com/nxsre/shortme/conf"
+	"github.com/nxsre/shortme/sequence"
+	_ "github.com/nxsre/shortme/sequence/db"
 	_ "github.com/go-sql-driver/mysql"
 )
 

@@ -1,15 +1,15 @@
 package api
 
 import (
-	"encoding/json"
+	json "github.com/json-iterator/go"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"net/url"
 	"strings"
 
-	"github.com/andyxning/shortme/conf"
-	"github.com/andyxning/shortme/short"
+	"github.com/nxsre/shortme/conf"
+	"github.com/nxsre/shortme/short"
 
 	"github.com/gorilla/mux"
 )
